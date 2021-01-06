@@ -19,40 +19,6 @@ Data-Warehouse-with-Redshift
 |   dwh.cfg             # Configuration file
 ```
 
-
-```
-[CLUSTER]
-HOST=
-DB_NAME=
-DB_USER=
-DB_PASSWORD=
-DB_PORT=
-
-[IAM_ROLE]
-ARN=''
-
-[S3]
-LOG_DATA='s3:// * * log_data'
-LOG_JSONPATH='s3://* * .json'
-SONG_DATA='s3://* *song_data'
-
-
-[AWS]
-KEY= * * * *
-SECRET= * * * *
-
-[DWH]
-DWH_CLUSTER_TYPE=multi-node
-DWH_NUM_NODES=4
-DWH_NODE_TYPE=dc2.large
-DWH_CLUSTER_IDENTIFIER=
-DWH_DB=
-DWH_DB_USER=
-DWH_DB_PASSWORD=
-DWH_PORT=
-DWH_IAM_ROLE_NAME=
-```
-
 ### Requirements for running locally
 - Python3
 - AWS Account
