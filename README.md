@@ -153,3 +153,17 @@ DWH_DB_PASSWORD=
 DWH_PORT=
 DWH_IAM_ROLE_NAME=
 ```
+### Project Steps
+
+`dwh_redshift.ipynb` notebook acts as the main project notebook. Below are steps of the project execution
+
+* Step 1: Load DWH parameters from `dwh.cfg`
+* Step 2: Create clients for IAM, EC2, S3 and Redshift
+* Step 3: Create an IAM Role that makes Redshift able to access S3 bucket (ReadOnly)
+* Step 4: Create a RedShift Cluster
+* Step 5: Open an incoming TCP port to access the cluster ednpoint
+* Step 6: Run `sql_queries.py` to load the SQL queries for table creation and data load
+* Step 7: Run `create_tables.py` to create tables 
+* Step 8: Run `etl.py` to run the ETL of coping the data from json and load them to Stagging tables and then to fact and dimension tables
+* Step 9: Run `validation.py` to check the data load into tables
+* Step 10: Clean up the Redshift and IAM role resources
